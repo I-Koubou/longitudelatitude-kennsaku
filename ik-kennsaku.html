@@ -6,15 +6,41 @@
     <title>緯度経度検索器</title>
 </head>
 <body>
-    <div style="border: #00053a solid 3px;  padding: 3px; text-align: center;">
+    <div class="box1">
     <h1>緯度経度検索器</h1>
     <p>このページは緯度と経度を入力したらGoogleマップで検索するアプリです。<br>例は35.68944,139.69167の場合です。</p>
     <p>緯度</p>
-    <input type="text" id="keido" size="30" placeholder="例:35.68944"><br>
+    <input type="number" id="keido" size="30" placeholder="例:35.68944"><br>
     <p>経度</p> 
-    <input type="text" id="ido" size="30" placeholder="例:139.69167"><br><br>
-　　<button type="button" onclick="alerthyo()" style="width:100px;height:50px">検索</button>
+    <input type="number" id="ido" size="30" placeholder="例:139.69167"><br><br>
+　　<button type="button" onclick="alerthyo()" style="width:100px;height:50px">作る</button>
     </div>
-    <style></style>
+    <br>
+    <div id="kotae" class="box2">
+        <div id="urltxt">
+        <p>生成したURL</p>
+        </div>
+        <a id="map" href="#" target="_blank" rel="noopener noreferrer" class="bt1">Googleマップで検索</a>
+    </div>
+    <script>document.getElementById("kotae").style.visibility="hidden";</script>
+    <style>
+        .box1{border: #00053a solid 3px;  padding: 3px; text-align: center;}
+        .box2{border: #00053a solid 3px;  padding: 3px; text-align: center; background-color: #f0e68c;}
+        .bt1{
+  display       : inline-block;
+  font-size     : 10pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 5px 10px;   /* 余白       */
+  background    : #000066;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  opacity       : 1;           /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+}
+.bt1:hover {
+  opacity       : 0.8;         /* カーソル時透明度 */
+}
+    </style>
 </body>
 </html>
