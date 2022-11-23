@@ -5,7 +5,7 @@ function alerthyo() {
   const keijs = document.getElementById("kei");
   const kei2 = keijs.value;
   const dasyo = ido2 + ',' + kei2
-      if (dasyo == ",") {
+      if (ido2 == "" || kei2 == "") {
         alert("緯度と経度を入力して下さい");
       } else {
         coun += 1;
